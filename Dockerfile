@@ -9,7 +9,7 @@ COPY . .
 # Package stage
 #
 FROM openjdk:11-jdk-slim
-# COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /target/Crop-Go-API-0.0.1-SNAPSHOT.jar Crop-Go-API.jar
 # ENV PORT=8080
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","demo.jar"]
